@@ -132,31 +132,34 @@ input[type="file"] {
     display: flex;
     flex-wrap: wrap;
 }
+
+
+
+.video-item video {
+    width: 200px;
+    height: 250px;
+}
+
 .video-item {
     width: 24%;
     position: relative;
 }
-.video-item:hover img {
-    display: block;
-}
-.video-item:nth-child(n + 5) {
-    margin-top: 20px;
-}
-.video-item:not(:nth-child(4n)) {
-    margin-right: calc(4% / 3);
-}
-.video-item video {
-    width: 100%;
-    height: 150px;
-}
-.video-item img {
-    display: block;
+
+
+.delete-icon {
     position: absolute;
     top: 12.5px;
     right: 12.5px;
     display: none;
     cursor: pointer;
 }
+
+.video-item:hover .delete-icon {
+    display: block;
+}
+
+
+
 .video-item p {
     margin-top: 4px;
     text-align: center;
@@ -173,4 +176,88 @@ input[type="file"] {
 #logoutBtn:hover {
     background-color: black;
     color:  white;
+}
+
+
+.admin-div {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.admin-div > img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.admin-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.admin-time-size {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;  /* ← sana pastroq */
+}
+
+.admin-title-wrapper {
+    display: flex;
+    flex-direction: row;  
+    gap: 6px;
+    align-items: center;
+}
+
+.admin-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #222;
+    margin: 0;
+}
+
+.admin-title {
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.admin-time {
+    font-size: 11px;
+    color: #999;
+}
+
+.download-admin {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    color: #6dabe4;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.download-admin img {
+    width: 14px;
+    height: 14px;
+}
+
+.videos-list {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1%;
+}
+
+.video-item {
+    width: 24%;
+    position: relative;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
