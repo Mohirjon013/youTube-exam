@@ -193,9 +193,9 @@ recognition.onresult = (event) => {
 async function getAvantarImg() {
     let res = await axios("https://n105.softwareengineer.uz/api/v1/users/all")
     let data = res.data.data
-
+    
     let user = window.localStorage.getItem("user")
-
+    
     data.forEach(item => {
         if(item.name == user){
             console.log(item.photo);
@@ -213,5 +213,8 @@ list.addEventListener("click", function(e){
     let token = window.localStorage.getItem("accesToken")
     if(token){
         window.location = "admin.html"
+    }
+    else{
+        window.location = "login.html"
     }
 })
